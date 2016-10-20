@@ -1,0 +1,39 @@
+﻿<div class="block-header">
+    <h2>
+        Student overzicht van {{selectedStudent.ID}}
+        <img class="lv-img" ng-src="Content/img/{{selectedStudent.ProfilePictureLocation}}" alt="{{selectedStudent.ID}}"/>
+    </h2>
+    <div class="pull-right">
+        <div class="btn-group" role="group">
+            <button type="button"
+                    class="btn btn-default"
+                    data-ng-click="setShowType('today')"
+                    data-ng-class="{'active': showType == 'today'}">
+                Enkel vandaag
+            </button>
+            <button type="button"
+                    class="btn btn-default"
+                    data-ng-click="setShowType('all')"
+                    data-ng-class="{'active': showType == 'all'}">
+                Alle antwoorden
+            </button>
+        </div>
+    </div>
+    <div class="media-body">
+        <small class="lv-small">Aantal antwoorden: {{selectedStudent.AmountOfAnswers}}</small><br/>
+        <small class="lv-small">Laatst ingezonden op: {{selectedStudent.LastAnswerDateTime}}</small>
+    </div>
+    <div data-ng-if="studentData.length > 0">
+        <div id="grid1"
+             ui-grid="{ data: studentData }"
+             style="height: 800px;"
+             class="grid">
+        </div>
+        <span>
+            De antwoorden zijn gesorteerd op Domain, Learning Objective, Subject en als laatst Submit Date Time
+        </span>
+    </div>
+    <div data-ng-if="studentData.length == 0">
+        Er zijn nog geen antwoorden voor deze student verwerkt met dit filter
+    </div>
+</div>

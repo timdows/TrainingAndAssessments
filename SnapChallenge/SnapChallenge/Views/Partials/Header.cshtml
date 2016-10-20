@@ -1,0 +1,59 @@
+﻿<ul class="header-inner">
+    <li id="menu-trigger"
+        data-target="mainmenu"
+        data-ng-click="toggleSidebarLeft()"
+        data-ng-class="{ 'open': sidebarToggle.left === true }">
+        <div class="line-wrap">
+            <div class="line top"></div>
+            <div class="line center"></div>
+            <div class="line bottom"></div>
+        </div>
+    </li>
+
+    <li class="logo hidden-xs">
+        <a data-ui-sref="home" data-ng-click="closeSidebars()">@ViewBag.LogoTitle</a>
+    </li>
+
+    <li class="pull-right">
+        <ul class="top-menu">
+
+            <li class="dropdown" dropdown>
+                <a dropdown-toggle class="tm-message" href="">
+                    <i class="tmn-counts" data-ng-show="importDetails.todo > 0">{{importDetails.todo}}</i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg stop-propagate pull-right">
+                    <div class="listview">
+                        <div class="lv-header">
+                            CSV naar database import status
+                        </div>
+                        <div class="lv-body">
+                            <a class="lv-item" ng-href="" ng-repeat="progress in importDetails.progress">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <div class="lv-title">{{progress.Name}}</div>
+                                        <small class="lv-small">
+                                            {{progress.Processed}} van {{progress.Total}} geimporteerd
+                                        </small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <span class="lv-footer" data-ng-show="importDetails.todo > 0">
+                            Wordt elke 2500 ms automatisch ververst
+                        </span>
+                        <span class="lv-footer" data-ng-show="importDetails.todo == 0">
+                            Het importeren van data is voltooid
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="hidden-xs"
+                data-target="chat"
+                data-ng-click="toggleSidebarRight()"
+                data-ng-class="{ 'open': sidebarToggle.right === true }">
+                <a class="tm-chat" href=""></a>
+            </li>
+        </ul>
+    </li>
+</ul>

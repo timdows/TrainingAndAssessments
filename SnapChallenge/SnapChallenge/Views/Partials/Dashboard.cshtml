@@ -1,0 +1,33 @@
+﻿<header id="header" data-ng-include="'partials/header.html'"></header>
+
+<section id="main">
+    <aside id="sidebar"
+           data-ng-include="'partials/sidebarleft.html'"
+           data-ng-class="{ 'toggled': sidebarToggle.left === true }"
+           ng-controller="sidebarLeftClientController">
+    </aside>
+    <aside id="chat"
+           data-ng-include="'partials/sidebarright.html'"
+           data-ng-class="{ 'toggled': sidebarToggle.right === true }"
+           ng-controller="sidebarRightClientController">
+    </aside>
+    <section id="content">
+        <div class="container"
+             data-ng-if="dashboardType.welcome"
+             data-ng-include="'partials/dashboardwelcome.html'"
+             ng-controller="dashboardWelcomeClientController">
+        </div>
+
+        <div class="container"
+             data-ng-if="dashboardType.teacher"
+             data-ng-include="'partials/dashboardteacher.html'"
+             ng-controller="dashboardTeacherClientController">
+        </div>
+
+        <div class="container"
+             data-ng-if="dashboardType.student"
+             data-ng-include="'partials/dashboardstudent.html'"
+             ng-controller="dashboardStudentClientController">
+        </div>
+    </section>
+</section>

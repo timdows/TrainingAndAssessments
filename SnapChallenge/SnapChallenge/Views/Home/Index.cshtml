@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Snap Challenge";
+}
+
+<!DOCTYPE html>
+<!--[if IE 9 ]>
+<html class="ie9" data-ng-app="snapChallenge" data-ng-controller="snapChallengeClientController">
+ <![endif]-->
+<![if IE 9 ]>
+<html data-ng-app="snapChallenge" data-ng-controller="snapChallengeClientController">
+<![endif]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/snapchallenge/css")
+</head>
+<body data-ng-class="{ 'modal-open': sidebarToggle.left === true }">
+    <data ui-view></data>
+    
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+        <div class="ie-warning">
+            Niet ondersteund
+        </div>
+    <![endif]-->
+
+    @Scripts.Render("~/snapchallenge/jquery")
+    @Scripts.Render("~/snapchallenge/angular")
+    @Scripts.Render("~/snapchallenge/angularmodules")
+    @Scripts.Render("~/snapchallenge/vendorscommon")
+    <!--[if IE 9 ]>@Scripts.Render("~/snapchallenge/ie9placeholoder")<![endif]-->
+    @Scripts.Render("~/snapchallenge/app")
+
+</body>
+</html>

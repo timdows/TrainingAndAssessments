@@ -1,0 +1,21 @@
+﻿<div class="block-header">
+    <h2 data-ng-show="selectedOverview != 'all'">
+        <span data-ng-show="selectedOverview == 'today'">Vandaag</span>
+        <span data-ng-show="selectedOverview == 'yesterday'">Gisteren</span> 
+        heeft de klas de volgende opdrachten ingestuurd
+    </h2>
+    <h2 data-ng-show="selectedOverview == 'all'">Alle antwoorden van mijn klas</h2>
+    <div data-ng-repeat="clientModel in clientModels">
+        <h3>{{clientModel.Subject}}<span data-ng-show="clientModel.Domain != '-'"> - {{clientModel.Domain}}</span></h3>
+
+        <div id="grid{{$index}}"
+             ng-if="clientModel.LearningObjectiveClientModels.length > 0"
+             ui-grid="{ data: clientModel.LearningObjectiveClientModels }"
+             class="grid"
+             ng-style="getGridHeight(clientModel.LearningObjectiveClientModels.length)">
+        </div>
+    </div>
+    <div data-ng-show="clientModels.length == 0">
+        Er zijn nog geen te tonen resultaten voor dit filter
+    </div>
+</div>

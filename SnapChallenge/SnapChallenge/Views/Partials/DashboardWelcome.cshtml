@@ -1,0 +1,14 @@
+﻿<div class="block-header">
+    <h2>Welkom op de Snap Challenge pagina</h2>
+    <div data-ng-if="importDetails.todo > 0">
+        Het importeren van de CSV is nog vollop bezig.<br/>
+        In de notificatie omgeving kan de voortgang worden bekeken.<br/>
+        Het is nu al mogelijk om geimporteerde details te bekijken via het leraren overzicht of dit per leerling weer te geven.
+    </div>
+    <div data-ng-if="importDetails.todo == 0">
+        Het importeren van de CSV is voltooid.
+    </div>
+    <div>
+        Het is nu @ViewBag.LocalDateTime lokale tijd.
+    </div>
+</div>

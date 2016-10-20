@@ -1,0 +1,33 @@
+﻿<div class="sidebar-inner c-overflow">
+    <div class="profile-menu">
+        <a href="">
+            <div class="profile-pic">
+                <img ng-src="Content/img/{{teacher.ProfilePictureLocation}}" alt="">
+            </div>
+            <div class="profile-info">
+                Leraar: {{teacher.FullName}}
+                <i class="zmdi zmdi-caret-down"></i>
+            </div>
+        </a>
+    </div>
+    <ul class="main-menu">
+        <li>
+            <a data-ui-sref="home"
+               data-ng-click="selectOverview('today')">
+                <i class="zmdi zmdi-home"></i> Mijn klas vandaag
+            </a>
+        </li>
+        <li>
+            <a data-ui-sref="home"
+               data-ng-click="selectOverview('yesterday')">
+                <i class="zmdi zmdi-home"></i> Mijn klas gisteren
+            </a>
+        </li>
+        <li>
+            <a data-ui-sref="home"
+               data-ng-click="selectOverview('all')">
+                <i class="zmdi zmdi-home"></i> Mijn klas alles
+            </a>
+        </li>
+    </ul>
+</div>

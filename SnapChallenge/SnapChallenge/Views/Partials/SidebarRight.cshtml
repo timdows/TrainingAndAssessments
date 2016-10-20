@@ -1,0 +1,27 @@
+﻿<div class="chat-search">
+    <div class="fg-line">
+        <input type="number"
+               class="form-control"
+               data-ng-model="searchStudent"
+               data-ng-change="searchStudents(searchStudent)"
+               placeholder="Zoek op leerling ID">
+    </div>
+</div>
+<div class="listview">
+    <a class="lv-item"
+       href=""
+       data-ng-repeat="student in students"
+       data-ng-click="selectStudent(student)">
+        <div class="media">
+            <div class="pull-left p-relative">
+                <img class="lv-img-sm" ng-src="Content/img/{{student.ProfilePictureLocation}}" alt="{{student.ID}}"/>
+                <i class="chat-status-online"></i>
+            </div>
+            <div class="media-body">
+                <div class="lv-title">{{student.ID}}</div>
+                <small class="lv-small">Aantal antwoorden: {{student.AmountOfAnswers}}</small>
+                <small data-ng-if="student.LastAnswerDateTime" class="lv-small">Laatste: {{student.LastAnswerDateTime}}</small>
+            </div>
+        </div>
+    </a>
+</div>
