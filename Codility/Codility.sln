@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Task 1", "Task 1\Task 1.xproj", "{1C6BEFF5-D40F-4304-9EE8-26EA5628018F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Task1 - Iterations", "Task 1\Task1 - Iterations.xproj", "{1C6BEFF5-D40F-4304-9EE8-26EA5628018F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Task2 - OddOccurrencesInArray", "Task2 - OddOccurrencesInArray\Task2 - OddOccurrencesInArray.xproj", "{CDDFF64B-7B04-4064-9125-DE1F13B774D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1C6BEFF5-D40F-4304-9EE8-26EA5628018F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6BEFF5-D40F-4304-9EE8-26EA5628018F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6BEFF5-D40F-4304-9EE8-26EA5628018F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDFF64B-7B04-4064-9125-DE1F13B774D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDFF64B-7B04-4064-9125-DE1F13B774D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDFF64B-7B04-4064-9125-DE1F13B774D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDFF64B-7B04-4064-9125-DE1F13B774D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
