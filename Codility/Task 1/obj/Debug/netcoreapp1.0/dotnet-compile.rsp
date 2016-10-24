@@ -1,5 +1,5 @@
---temp-output:C:\Dev\Test\ConsoleApp1\obj\Debug\netcoreapp1.0\
---out:C:\Dev\Test\ConsoleApp1\bin\Debug\netcoreapp1.0\ConsoleApp1.dll
+--temp-output:C:\Users\ttheeuwe85\Documents\GitHub\TrainingAndAssessments\Codility\Task 1\obj\Debug\netcoreapp1.0\
+--out:C:\Users\ttheeuwe85\Documents\GitHub\TrainingAndAssessments\Codility\Task 1\bin\Debug\netcoreapp1.0\Task 1.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -8,7 +8,7 @@
 --suppress-warning:CS1705
 --optimize:False
 --emit-entry-point:True
---output-name:ConsoleApp1
+--output-name:Task 1
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -86,5 +86,5 @@
 --reference:C:\Users\ttheeuwe85\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\ttheeuwe85\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\ttheeuwe85\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\Dev\Test\ConsoleApp1\Program.cs
-C:\Dev\Test\ConsoleApp1\Properties\AssemblyInfo.cs
+C:\Users\ttheeuwe85\Documents\GitHub\TrainingAndAssessments\Codility\Task 1\Program.cs
+C:\Users\ttheeuwe85\Documents\GitHub\TrainingAndAssessments\Codility\Task 1\Properties\AssemblyInfo.cs

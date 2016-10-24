@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Task2___OddOccurrencesInArray
 {
@@ -20,13 +18,17 @@ namespace Task2___OddOccurrencesInArray
                 9
             };
 
-            var a = Solution(array);
+            Console.WriteLine(Solution(array) == 7 ? "Test passed" : "Test failed");
         }
 
         public static int Solution(int[] array)
         {
+            if (array.Length == 0)
+            {
+                return 0;
+            }
 
-            return 0;
+            return array.FirstOrDefault(i => array.Count(a_item => a_item == i) == 1);
         }
     }
 }
